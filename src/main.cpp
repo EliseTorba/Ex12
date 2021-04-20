@@ -1,6 +1,7 @@
-// Copyright 2021 GHA Test Team
-#include "TimedDoor.h"
+// Copyright 2021 Elise
 #include <iostream>
+#include <ctime>
+#include "TimedDoor.h"
 
 int main() {
   TimedDoor tDoor(5);

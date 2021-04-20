@@ -1,10 +1,10 @@
 // Copyright 2021 Elise
 
-#include "TimedDoor.h"
 #include <chrono>
 #include <thread>
-#include <iostream>
 #include <string>
+
+#include "TimedDoor.h"
 
 
 void Timer::sleep(int iTimeout) {

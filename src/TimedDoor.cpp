@@ -1,14 +1,15 @@
 // Copyright 2021 Elise
 
-#include <chrono>
-#include <thread>
-#include <string>
-
+#include<string>
+#include <ctime>
 #include "TimedDoor.h"
 
 
 void Timer::sleep(int iTimeout) {
-  std::this_thread::sleep_for(std::chrono::milliseconds(iTimeout * 1000));
+  time_t start = time(nullptr);
+  while (time(nullptr) - start < iTimeout) {
+    continue;
+  }
 }
 
 void Timer::tregister(int timeout, TimerClient* client) {
